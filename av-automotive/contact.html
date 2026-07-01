@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — AV Automotive Detailing</title>
+  <meta name="description" content="Book a mobile detail in Lancaster, PA. Call (267) 598-0991 or fill out the form." />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Teko:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="AV Automotive Detailing" /></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#" data-modal class="nav-book">Book Now</a></li>
+    </ul>
+    <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="page-hero" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="eyebrow fade-up">Get in Touch</div>
+    <h1 class="fade-up d1" id="contact-title">Book Your Detail</h1>
+    <p class="section-sub fade-up d2">Mobile service throughout Lancaster, PA. Fill out the form below or give us a call — we'll confirm your appointment within a few hours.</p>
+  </div>
+</section>
+
+<section style="padding:0 0 var(--S);background:var(--bg);" aria-label="Contact">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <!-- Left: contact info -->
+      <div class="contact-info fade-up">
+        <div class="ci-item">
+          <div class="ci-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.73a16 16 0 0 0 6.36 6.36l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="ci-label">Phone</div>
+            <a href="tel:+12675980991" class="ci-value">(267) 598-0991</a>
+          </div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <div class="ci-label">Service Area</div>
+            <div class="ci-value">Lancaster, PA</div>
+            <div class="ci-note">Mobile — We Come to You</div>
+          </div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </div>
+          <div>
+            <div class="ci-label">Instagram</div>
+            <a href="https://www.instagram.com/avautomotive_/" target="_blank" rel="noopener noreferrer" class="ci-value">@avautomotive_</a>
+          </div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div>
+            <div class="ci-label">Response Time</div>
+            <div class="ci-value">Within a Few Hours</div>
+          </div>
+        </div>
+
+        <div class="ci-stats">
+          <div class="ci-stat">
+            <span class="ci-stat-n">5.0</span>
+            <span class="ci-stat-l">Google Rating</span>
+          </div>
+          <div class="ci-stat">
+            <span class="ci-stat-n">10</span>
+            <span class="ci-stat-l">5-Star Reviews</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="contact-form-wrap fade-up d1">
+        <form id="contactPageForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required placeholder="John" />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required placeholder="Smith" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required placeholder="(267) 555-0100" />
+          </div>
+          <div class="form-group">
+            <label for="service">Service</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service…</option>
+              <option value="quick-wash">Quick Wash — $150 / $175</option>
+              <option value="basic-detail">Basic Detail — $250</option>
+              <option value="deluxe-detail">Deluxe Detail — $400</option>
+              <option value="paint-correction">Paint Correction — Get a Quote</option>
+              <option value="tinting">Window Tinting — Get a Quote</option>
+              <option value="vinyl-wrap">Vinyl Wrap — Get a Quote</option>
+              <option value="ceramic-coating">Ceramic Coating — Get a Quote</option>
+              <option value="other">Not Sure / Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="vehicle">Your Vehicle</label>
+            <input type="text" id="vehicle" name="vehicle" placeholder="Year, make &amp; model" />
+          </div>
+          <div class="form-group">
+            <label for="preferred">Preferred Date / Time</label>
+            <input type="text" id="preferred" name="preferred" placeholder="e.g. Saturday morning, weekday afternoon" />
+          </div>
+          <div class="form-group">
+            <label for="location">Service Location</label>
+            <input type="text" id="location" name="location" placeholder="Your address or area in Lancaster, PA" />
+          </div>
+          <div class="form-group">
+            <label for="notes">Additional Notes</label>
+            <textarea id="notes" name="notes" placeholder="Anything else we should know — condition of vehicle, specific areas of concern, etc."></textarea>
+          </div>
+          <button type="submit" class="btn btn-red" style="width:100%;justify-content:center;">Send Message</button>
+        </form>
+
+        <div id="contactPageSuccess" style="display:none;padding:52px 32px;text-align:center;">
+          <div style="font-size:42px;color:var(--red-b);margin-bottom:20px;line-height:1;">&#10003;</div>
+          <h3 style="font-family:var(--font-d);font-size:26px;font-weight:700;color:var(--white);margin-bottom:12px;">Message Sent!</h3>
+          <p style="color:var(--grey);font-size:15px;">We'll be in touch within a few hours to confirm your appointment.<br>You can also reach us at <a href="tel:+12675980991" style="color:var(--red-b);">(267) 598-0991</a>.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="AV Automotive Detailing" />
+        <p>Expert mobile auto detailing in Lancaster, PA. Cleaner. Shinier. Better.</p>
+        <a href="https://www.instagram.com/avautomotive_/" target="_blank" rel="noopener noreferrer" class="f-ig">@avautomotive_</a>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="tel:+12675980991">(267) 598-0991</a></li>
+          <li><a href="https://www.instagram.com/avautomotive_/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        </ul>
+        <p class="f-addr">Lancaster, PA<br>Mobile Service — We Come to You</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 AV Automotive Detailing. All rights reserved.</span>
+      <span>Lancaster, PA &middot; Mobile Detailing</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal (for nav Book Now button) -->
+<div class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <button class="modal-close" aria-label="Close">&times;</button>
+    <div class="form-body" id="formBody">
+      <h2 class="modal-title" id="modalTitle">Book an Appointment</h2>
+      <p class="modal-sub">Fill out the form and we'll confirm within a few hours. Or call us at <strong>(267) 598-0991</strong>.</p>
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group"><label for="mFirstName">First Name</label><input type="text" id="mFirstName" name="firstName" required placeholder="John" /></div>
+          <div class="form-group"><label for="mLastName">Last Name</label><input type="text" id="mLastName" name="lastName" required placeholder="Smith" /></div>
+        </div>
+        <div class="form-group"><label for="mPhone">Phone Number</label><input type="tel" id="mPhone" name="phone" required placeholder="(267) 555-0100" /></div>
+        <div class="form-group">
+          <label for="mService">Service</label>
+          <select id="mService" name="service" required>
+            <option value="" disabled selected>Select a service…</option>
+            <option value="quick-wash">Quick Wash — $150 / $175</option>
+            <option value="basic-detail">Basic Detail — $250</option>
+            <option value="deluxe-detail">Deluxe Detail — $400</option>
+            <option value="paint-correction">Paint Correction — Get a Quote</option>
+            <option value="tinting">Window Tinting — Get a Quote</option>
+            <option value="vinyl-wrap">Vinyl Wrap — Get a Quote</option>
+            <option value="ceramic-coating">Ceramic Coating — Get a Quote</option>
+            <option value="other">Not Sure / Other</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="mVehicle">Your Vehicle</label><input type="text" id="mVehicle" name="vehicle" placeholder="Year, make & model" /></div>
+        <div class="form-group"><label for="mPreferred">Preferred Date / Time</label><input type="text" id="mPreferred" name="preferred" placeholder="e.g. Saturday morning" /></div>
+        <div class="form-group"><label for="mLocation">Service Location</label><input type="text" id="mLocation" name="location" placeholder="Your address or area in Lancaster, PA" /></div>
+        <div class="form-group"><label for="mNotes">Additional Notes</label><textarea id="mNotes" name="notes" placeholder="Anything else we should know…"></textarea></div>
+        <button type="submit" class="btn btn-red" style="width:100%;justify-content:center;">Send Message</button>
+      </form>
+    </div>
+    <div class="form-success" aria-live="polite">
+      <div class="form-success-icon">&#10003;</div>
+      <h3>Message Sent!</h3>
+      <p>We'll be in touch shortly to confirm your appointment.</p>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — AV Automotive Detailing</title>
+  <meta name="description" content="See before & after results from AV Automotive Detailing in Lancaster, PA." />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Teko:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Lightbox */
+    .lightbox {
+      position:fixed; inset:0; z-index:3000;
+      background:rgba(0,0,0,.95);
+      display:flex; align-items:center; justify-content:center;
+      opacity:0; pointer-events:none; transition:opacity .3s;
+    }
+    .lightbox.open { opacity:1; pointer-events:all; }
+    .lightbox img { max-width:90vw; max-height:88vh; object-fit:contain; border-radius:2px; }
+    .lb-close {
+      position:absolute; top:18px; right:22px;
+      background:none; border:none; color:rgba(255,255,255,.6);
+      font-size:32px; line-height:1; cursor:pointer; transition:color .2s;
+    }
+    .lb-close:hover { color:#fff; }
+    /* Photo hover overlay */
+    .gp-slot .gp-hover {
+      position:absolute; inset:0; z-index:4;
+      background:rgba(6,8,14,.3);
+      display:flex; align-items:center; justify-content:center;
+      opacity:0; transition:opacity .3s;
+    }
+    .gp-slot:hover .gp-hover { opacity:1; }
+    .gp-hover svg { width:28px; height:28px; stroke:rgba(255,255,255,.8); }
+  </style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="AV Automotive Detailing" /></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#" data-modal class="nav-book">Book Now</a></li>
+    </ul>
+    <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="page-hero" aria-labelledby="gallery-title">
+  <div class="wrap">
+    <div class="eyebrow fade-up">Our Work</div>
+    <h1 class="fade-up d1" id="gallery-title">The Results</h1>
+    <p class="section-sub fade-up d2">Every vehicle gets our full attention. See what's possible when you care about the details.</p>
+  </div>
+</section>
+
+<!-- PHOTO GALLERY -->
+<!--
+  HOW TO ADD PHOTOS
+  ─────────────────
+  1. Save photos to the images/gallery/ folder.
+  2. Each .gp-slot already has an <img> pointing to the right path.
+     The image is hidden via onerror until the file exists — no placeholder box shown.
+  3. To change the label, edit the text inside <span class="gp-slot-label">.
+  4. To add more slots, copy a .gp-slot block and paste it in the grid.
+  5. The lightbox opens automatically when a photo is clicked.
+-->
+<section style="padding:var(--S) 0;background:var(--bg);" aria-label="Photo gallery">
+  <div class="wrap">
+    <div class="fade-up" style="margin-bottom:44px;">
+      <div class="eyebrow">Photos</div>
+      <h2 class="section-title">Before &amp; After</h2>
+    </div>
+    <div class="gallery-page-grid fade-up d1" id="photoGrid">
+
+      <div class="gp-slot" data-src="images/gallery/gallery-1.jpg" data-alt="Exterior wash result">
+        <div class="gp-slot-bg"></div>
+        <img src="images/gallery/gallery-1.jpg" alt="Exterior wash" onerror="this.remove()" />
+        <div class="gp-hover" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+          </svg>
+        </div>
+        <span class="gp-slot-label">Exterior Wash</span>
+      </div>
+
+      <div class="gp-slot" data-src="images/gallery/gallery-2.jpg" data-alt="Interior detailing">
+        <div class="gp-slot-bg"></div>
+        <img src="images/gallery/gallery-2.jpg" alt="Interior detailing" onerror="this.remove()" />
+        <div class="gp-hover" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+          </svg>
+        </div>
+        <span class="gp-slot-label">Interior Detail</span>
+      </div>
+
+      <div class="gp-slot" data-src="images/gallery/gallery-3.jpg" data-alt="Paint correction">
+        <div class="gp-slot-bg"></div>
+        <img src="images/gallery/gallery-3.jpg" alt="Paint correction" onerror="this.remove()" />
+        <div class="gp-hover" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+          </svg>
+        </div>
+        <span class="gp-slot-label">Paint Correction</span>
+      </div>
+
+      <div class="gp-slot" data-src="images/gallery/gallery-4.jpg" data-alt="Ceramic coating">
+        <div class="gp-slot-bg"></div>
+        <img src="images/gallery/gallery-4.jpg" alt="Ceramic coating" onerror="this.remove()" />
+        <div class="gp-hover" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+          </svg>
+        </div>
+        <span class="gp-slot-label">Ceramic Coating</span>
+      </div>
+
+      <div class="gp-slot" data-src="images/gallery/gallery-5.jpg" data-alt="Wheel detailing">
+        <div class="gp-slot-bg"></div>
+        <img src="images/gallery/gallery-5.jpg" alt="Wheel detailing" onerror="this.remove()" />
+        <div class="gp-hover" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+          </svg>
+        </div>
+        <span class="gp-slot-label">Wheel Detailing</span>
+      </div>
+
+      <div class="gp-slot" data-src="images/gallery/gallery-6.jpg" data-alt="Deluxe detail work">
+        <div class="gp-slot-bg"></div>
+        <img src="images/gallery/gallery-6.jpg" alt="Deluxe detail" onerror="this.remove()" />
+        <div class="gp-hover" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+          </svg>
+        </div>
+        <span class="gp-slot-label">Deluxe Detail</span>
+      </div>
+
+      <div class="gp-slot" data-src="images/gallery/gallery-7.jpg" data-alt="Quick wash result">
+        <div class="gp-slot-bg"></div>
+        <img src="images/gallery/gallery-7.jpg" alt="Quick wash" onerror="this.remove()" />
+        <div class="gp-hover" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+          </svg>
+        </div>
+        <span class="gp-slot-label">Quick Wash</span>
+      </div>
+
+      <div class="gp-slot" data-src="images/gallery/gallery-8.jpg" data-alt="Vinyl wrap">
+        <div class="gp-slot-bg"></div>
+        <img src="images/gallery/gallery-8.jpg" alt="Vinyl wrap" onerror="this.remove()" />
+        <div class="gp-hover" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+          </svg>
+        </div>
+        <span class="gp-slot-label">Vinyl Wrap</span>
+      </div>
+
+      <div class="gp-slot" data-src="images/gallery/gallery-9.jpg" data-alt="Window tinting">
+        <div class="gp-slot-bg"></div>
+        <img src="images/gallery/gallery-9.jpg" alt="Window tinting" onerror="this.remove()" />
+        <div class="gp-hover" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+          </svg>
+        </div>
+        <span class="gp-slot-label">Window Tinting</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO SECTION -->
+<!--
+  HOW TO ADD VIDEOS
+  ─────────────────
+  Option A — Self-hosted MP4:
+    Replace <div class="v-slot-bg"></div> and the label span with:
+    <video controls poster="images/gallery/thumb.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;">
+      <source src="images/gallery/your-video.mp4" type="video/mp4" />
+    </video>
+
+  Option B — YouTube embed:
+    Replace contents with:
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video title"
+      frameborder="0" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;z-index:1;"></iframe>
+-->
+<section style="padding:0 0 var(--S);background:var(--bg);" aria-label="Videos">
+  <div class="wrap">
+    <div class="fade-up" style="margin-bottom:44px;">
+      <div class="eyebrow">Video</div>
+      <h2 class="section-title">Watch the Transformation</h2>
+      <p class="section-sub">Time-lapses, walk-arounds, and showcases from real jobs.</p>
+    </div>
+    <div class="video-grid fade-up d1">
+      <div class="v-slot">
+        <div class="v-slot-bg"></div>
+        <span class="v-slot-label">Add Video</span>
+      </div>
+      <div class="v-slot">
+        <div class="v-slot-bg"></div>
+        <span class="v-slot-label">Add Video</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section style="padding:var(--S) 0;background:var(--bg-2);border-top:1px solid var(--border);text-align:center;" aria-label="Instagram">
+  <div class="wrap">
+    <div class="eyebrow fade-up">More on Instagram</div>
+    <h2 class="section-title fade-up d1">@avautomotive_</h2>
+    <p class="section-sub fade-up d2" style="margin:0 auto 36px;">We post every job. Follow along to see the latest work.</p>
+    <a href="https://www.instagram.com/avautomotive_/" target="_blank" rel="noopener noreferrer" class="ig-link fade-up d3" style="justify-content:center;">
+      <span class="ig-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+      </span>
+      Follow on Instagram
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="AV Automotive Detailing" />
+        <p>Expert mobile auto detailing in Lancaster, PA. Cleaner. Shinier. Better.</p>
+        <a href="https://www.instagram.com/avautomotive_/" target="_blank" rel="noopener noreferrer" class="f-ig">@avautomotive_</a>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="tel:+12675980991">(267) 598-0991</a></li>
+          <li><a href="https://www.instagram.com/avautomotive_/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="#" data-modal>Book Now</a></li>
+        </ul>
+        <p class="f-addr">Lancaster, PA<br>Mobile Service — We Come to You</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 AV Automotive Detailing. All rights reserved.</span>
+      <span>Lancaster, PA &middot; Mobile Detailing</span>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <button class="modal-close" aria-label="Close">&times;</button>
+    <div class="form-body" id="formBody">
+      <h2 class="modal-title" id="modalTitle">Book an Appointment</h2>
+      <p class="modal-sub">Fill out the form and we'll confirm within a few hours. Or call us at <strong>(267) 598-0991</strong>.</p>
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group"><label for="firstName">First Name</label><input type="text" id="firstName" name="firstName" required placeholder="John" /></div>
+          <div class="form-group"><label for="lastName">Last Name</label><input type="text" id="lastName" name="lastName" required placeholder="Smith" /></div>
+        </div>
+        <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" required placeholder="(267) 555-0100" /></div>
+        <div class="form-group">
+          <label for="service">Service</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Select a service…</option>
+            <option value="quick-wash">Quick Wash — $150 / $175</option>
+            <option value="basic-detail">Basic Detail — $250</option>
+            <option value="deluxe-detail">Deluxe Detail — $400</option>
+            <option value="paint-correction">Paint Correction — Get a Quote</option>
+            <option value="tinting">Window Tinting — Get a Quote</option>
+            <option value="vinyl-wrap">Vinyl Wrap — Get a Quote</option>
+            <option value="ceramic-coating">Ceramic Coating — Get a Quote</option>
+            <option value="other">Not Sure / Other</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="vehicle">Your Vehicle</label><input type="text" id="vehicle" name="vehicle" placeholder="Year, make & model" /></div>
+        <div class="form-group"><label for="preferred">Preferred Date / Time</label><input type="text" id="preferred" name="preferred" placeholder="e.g. Saturday morning" /></div>
+        <div class="form-group"><label for="location">Service Location</label><input type="text" id="location" name="location" placeholder="Your address or area in Lancaster, PA" /></div>
+        <div class="form-group"><label for="notes">Additional Notes</label><textarea id="notes" name="notes" placeholder="Anything else we should know…"></textarea></div>
+        <button type="submit" class="btn btn-red" style="width:100%;justify-content:center;">Send Message</button>
+      </form>
+    </div>
+    <div class="form-success" aria-live="polite">
+      <div class="form-success-icon">&#10003;</div>
+      <h3>Message Sent!</h3>
+      <p>We'll be in touch shortly to confirm your appointment.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-close" id="lbClose" aria-label="Close photo">&times;</button>
+  <img id="lbImg" src="" alt="" />
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  // Lightbox — only activates for slots that have real loaded images
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  document.getElementById('lbClose').addEventListener('click', () => {
+    lb.classList.remove('open'); document.body.style.overflow = '';
+  });
+  lb.addEventListener('click', e => {
+    if (e.target === lb) { lb.classList.remove('open'); document.body.style.overflow = ''; }
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && lb.classList.contains('open')) {
+      lb.classList.remove('open'); document.body.style.overflow = '';
+    }
+  });
+  document.querySelectorAll('.gp-slot').forEach(slot => {
+    slot.addEventListener('click', () => {
+      const img = slot.querySelector('img');
+      if (!img) return;
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+</script>
+</body>
+</html>
